@@ -1,0 +1,111 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to greetings
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+
+  - rule: Navigate to Expense Tracking
+    steps:
+      - intent: inquire_expense_tracking
+      - action: utter_inquire_expense_tracking
+
+  - rule: Navigate to Real-Time Insights
+    steps:
+      - intent: inquire_real_time_insights
+      - action: utter_inquire_real_time_insights
+
+  - rule: Navigate to Chatbot Support
+    steps:
+      - intent: inquire_chatbot_support
+      - action: utter_inquire_chatbot_support
+
+  - rule: Navigate to Profile Management
+    steps:
+      - intent: inquire_profile_management
+      - action: utter_inquire_profile_management
+
+
+
+
+  - rule: Navigate to Add Expense
+    steps:
+      - intent: inquire_add_expense
+      - action: utter_inquire_add_expense
+
+  - rule: Navigate to View Expense Details
+    steps:
+      - intent: inquire_view_expense_details
+      - action: utter_inquire_view_expense_details
+
+  - rule: Navigate to Find Charts
+    steps:
+      - intent: inquire_find_charts
+      - action: utter_inquire_find_charts
+
+  - rule: Navigate to Edit Profile Information
+    steps:
+      - intent: inquire_edit_profile_information
+      - action: utter_inquire_edit_profile_information
+
+  - rule: Handle Non-Existent Feature Inquiries
+    steps:
+      - intent: inquire_non_existent_feature
+      - action: utter_non_existent_feature
+
+  - rule: Provide Tips for Dashboard
+    steps:
+      - intent: ask_dashboard_tips
+      - action: utter_dashboard_tips
+
+  - rule: Provide Tips for Expense Tracking
+    steps:
+      - intent: ask_expense_tracking_tips
+      - action: utter_expense_tracking_tips
+
+  - rule: Provide Tips for Chatbot Page
+    steps:
+      - intent: ask_chatbot_page_tips
+      - action: utter_chatbot_page_tips
+
+  - rule: Provide Tips for Profile Page
+    steps:
+      - intent: ask_profile_page_tips
+      - action: utter_profile_page_tips
+
+  - rule: Provide Tips for User Management Page
+    steps:
+      - intent: ask_user_management_page_tips
+      - action: utter_user_management_page_tips
+
+  - rule: Provide Tips for Landing Page
+    steps:
+      - intent: ask_landing_page_tips
+      - action: utter_landing_page_tips
+
+  - rule: Provide Tips for Add Expense Page
+    steps:
+      - intent: ask_add_expense_page_tips
+      - action: utter_add_expense_page_tips
+
+  - rule: Provide Tips for Login Screen
+    steps:
+      - intent: ask_login_screen_tips
+      - action: utter_login_screen_tips
+
+  - rule: User provides feedback
+    steps:
+      - intent: feedback
+      - action: utter_feedback
+
+  - rule: Handle unknown intent
+    steps:
+      - intent: unknown
+      - action: utter_unknown

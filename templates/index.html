@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Rasa Bot</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; }
+        #chatbox { border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; }
+        .message { padding: 8px; margin: 5px 0; border-radius: 5px; }
+        .user { background-color: #daf5d9; text-align: right; }
+        .bot { background-color: #f0f0f0; text-align: left; }
+        #userInput { width: calc(100% - 60px); padding: 10px; }
+        #sendButton { padding: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Chat with Rasa Bot</h2>
+    <div id="chatbox"></div>
+
+    <input type="text" id="userInput" placeholder="Type a message...">
+    <button id="sendButton">Send</button>
+
+    <script>
+        const chatbox = document.getElementById("chatbox");
+        const userInput = document.getElementById("userInput");
+        const sendButton = document.getElementById("sendButton");
+
+        function displayMessage(text, sender) {
+            const message = document.createElement("div");
+            message.classList.add("message", sender);
+            message.textContent = text;
+            chatbox.appendChild(message);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            displayMessage(message, "user");
+            userInput.value = "";
+
+            try {
+                const response = await fetch("http://localhost:8000/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                const data = await response.json();
+                displayMessage(data.message, "bot");
+            } catch (error) {
+                displayMessage("Error: Could not connect to server", "bot");
+                console.error("Error:", error);
+            }
+        }
+
+        sendButton.addEventListener("click", sendMessage);
+        userInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

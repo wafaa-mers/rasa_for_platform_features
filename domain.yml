@@ -1,0 +1,95 @@
+version: '3.1'
+intents:
+- ask_add_expense_page_tips
+- ask_chatbot_page_tips
+- ask_dashboard_tips
+- ask_expense_tracking_tips
+- ask_landing_page_tips
+- ask_login_screen_tips
+- ask_profile_page_tips
+- ask_user_management_page_tips
+- feedback
+- goodbye
+- greet
+- inquire_about_platform
+- inquire_add_expense
+- inquire_chatbot_support
+- inquire_edit_profile_information
+- inquire_expense_tracking
+- inquire_find_charts
+- inquire_non_existent_feature
+- inquire_profile_management
+- inquire_real_time_insights
+- inquire_view_expense_details
+- unknown
+responses:
+  utter_greet:
+  - text: Hey! How can I assist you today?
+  utter_goodbye:
+  - text: Goodbye! Have a great day.
+  utter_inquire_about_platform:
+  - text: FinHEALTH is a financial health evaluation platform designed to help organizations monitor and enhance their financial performance. It offers real-time insights, expense tracking, and AI-assistance for data understanding.
+  utter_inquire_expense_tracking:
+  - text: To find the Expense Tracking feature, in the sidebar click on 'Expense Tracking' to manage and visualize your expenses.
+  utter_inquire_real_time_insights:
+  - text: You can find Real-Time Insights on the Dashboard page that you can select from the sidebar. It displays key financial metrics and graphs to help you monitor your financial health.
+  utter_inquire_chatbot_support:
+  - text: The Chatbot Support feature is accessible through the Chatbot Page in the sidebar. You can interact with the chatbot for assistance to understand your data easily.
+  utter_inquire_profile_management:
+  - text: To manage your profile, go to the Profile Page via the sidebar. You can edit your personal information and settings there.
+  utter_inquire_add_expense:
+  - text: To add an expense, go to the Expense Tracking page from the sidebar, and click on the 'Add Expense' button that you find on top to get the form where you can fill in the details.
+  utter_inquire_view_expense_details:
+  - text: To view the details of an expense, navigate to the Expense Tracking page through the side bar and select the specific expense you want to view.
+  utter_inquire_find_charts:
+  - text: You can find charts that describe your data on the Dashboard page that you can navigate to from the sidebar. They display various metrics related to your financial performance.
+  utter_inquire_edit_profile_information:
+  - text: To edit your profile information, go to the Profile Page from the sidebar, where you can update your details and settings.
+  utter_non_existent_feature:
+  - text: I'm sorry, but that feature is not available on FinHEALTH. Please let me know if there's anything else I can assist you with!
+  utter_dashboard_tips:
+  - text: In the Dashboard, you can view your company's financial status, including quick statistics and graphs for cash flow and transactions.
+  utter_expense_tracking_tips:
+  - text: In the Expense Tracking section, you can manage and visualize your expenses. You can add new expenses, filter through your existing expenses, and view pie charts representing expense categories.
+  utter_chatbot_page_tips:
+  - text: In the Chatbot page, you can interact with me to get assistance on various features and financial queries. Just type your question, and I’ll do my best to help!
+  utter_profile_page_tips:
+  - text: On your Profile page, you can view and edit your personal information, update privacy settings, and change your password.
+  utter_user_management_page_tips:
+  - text: In the User Management page, as an Admin, you can add, edit, or delete users and manage their roles.
+  utter_landing_page_tips:
+  - text: The Landing Page introduces FinHEALTH. Here, you can find information about features, user feedback, and quick links to sign up or log in.
+  utter_add_expense_page_tips:
+  - text: On the Add Expense Page, you can enter the details for new expenses. Make sure to fill in all required fields before saving.
+  utter_login_screen_tips:
+  - text: On the Login Screen, you can enter your credentials to access your account. If you forgot your password, click on the 'Forgot Password' button.
+  utter_feedback:
+  - text: Thank you for your feedback! We always strive to improve our platform.
+  utter_unknown:
+  - text: I'm not sure how to help with that. Could you please ask something specific about FinHEALTH or its functionalities?
+actions:
+- utter_greet
+- utter_goodbye
+- utter_inquire_add_expense
+- utter_inquire_about_platform
+- utter_inquire_real_time_insights
+- utter_inquire_expense_tracking
+- utter_inquire_chatbot_support
+- utter_inquire_profile_management
+- utter_feedback
+- utter_unknown
+- utter_inquire_view_expense_details
+- utter_inquire_find_charts
+- utter_inquire_edit_profile_information
+- utter_non_existent_feature
+- utter_dashboard_tips
+- utter_expense_tracking_tips
+- utter_chatbot_page_tips
+- utter_profile_page_tips
+- utter_user_management_page_tips
+- utter_landing_page_tips
+- utter_add_expense_page_tips
+- utter_login_screen_tips
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

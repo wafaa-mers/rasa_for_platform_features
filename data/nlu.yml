@@ -1,0 +1,127 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - Hi
+    - Good morning
+    - Hey there
+    - hello
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - See you later
+    - Bye
+    - Have a nice day
+    - bye
+    - quit
+- intent: inquire_about_platform
+  examples: |
+    - What is FinHEALTH?
+    - Can you explain the platform?
+    - What functionalities does FinHEALTH offer?
+    - what features do you have?
+- intent: inquire_expense_tracking
+  examples: |
+    - Where do I find the expense tracking feature?
+    - Can you guide me to the expense tracking section?
+    - How do I access expense tracking?
+    - Where is the expense tracking tool?
+- intent: inquire_real_time_insights
+  examples: |
+    - Where can I find real-time insights?
+    - How do I access the dashboard for financial metrics?
+    - Can you show me the real-time insights feature?
+    - What section provides real-time insights?
+- intent: inquire_chatbot_support
+  examples: |
+    - Where do I find the chatbot support?
+    - How can I use the chatbot on the platform?
+    - Can you guide me to the chatbot feature?
+    - What page has chatbot support?
+    - How can AI help me understand my data?
+    - Where is the AI assistant responsible on helping me with the data?
+- intent: inquire_profile_management
+  examples: |
+    - How can I manage my profile?
+    - Where can I update my profile picture?
+    - Can you help me find my profile settings?
+    - Where do I edit my profile information?
+- intent: inquire_add_expense
+  examples: |
+    - How can I add an expense?
+    - Can you guide me on adding a new expense?
+    - Where do I go to add an expense?
+    - What steps do I follow to add an expense?
+    - how can I add an expanse
+- intent: inquire_view_expense_details
+  examples: |
+    - How can I view the details of an expense?
+    - Where can I find my expense details?
+    - Can you help me view a specific expense?
+    - How do I check the details of an expense?
+- intent: inquire_find_charts
+  examples: |
+    - Where can I find the charts that describe my data?
+    - How do I view the charts for my financial metrics?
+    - Can you show me the charts on the dashboard?
+    - Where are the visualizations for my expenses?
+- intent: inquire_edit_profile_information
+  examples: |
+    - Where can I edit my profile information?
+    - How do I update my profile details?
+    - Can you guide me on editing my profile?
+    - Where do I go to change my profile settings?
+- intent: inquire_non_existent_feature
+  examples: |
+    - How can I edit my profile picture?
+    - Can I change my username?
+    - Is there a way to customize my dashboard?
+    - How do I change my email address?
+    - Can I add tags to my expenses?
+    - How can I create a budget within the platform?
+    - Can I view my financial history in detail?
+    - Is there a feature for reminders or alerts?
+- intent: ask_dashboard_tips
+  examples: |
+    - I am in the Dashboard, what can I do here?
+    - Can you give me tips for using the Dashboard?
+- intent: ask_expense_tracking_tips
+  examples: |
+    - I need tips for using the Expense Tracking page.
+    - What features are available in Expense Tracking?
+- intent: ask_chatbot_page_tips
+  examples: |
+    - What can I do in the Chatbot page?
+    - I am using the Chatbot, can you help me?
+- intent: ask_profile_page_tips
+  examples: |
+    - How can I edit my Profile information?
+    - What can I do on my Profile page?
+    - What can I see in my profile?
+- intent: ask_user_management_page_tips
+  examples: |
+    - What options do I have in the User Management page?
+    - Can you guide me in the User Management section?
+- intent: ask_landing_page_tips
+  examples: |
+    - What should I know about the Landing Page?
+    - Can you tell me about the features on the Landing Page?
+- intent: ask_add_expense_page_tips
+  examples: |
+    - How do I use the Add Expense Page?
+    - What should I do in the Add Expense section?
+- intent: ask_login_screen_tips
+  examples: |
+    - What can I do on the Login Screen?
+    - How do I log in?
+- intent: feedback
+  examples: |
+    - I want to give some feedback.
+    - Can I share my experience with the platform?
+    - I have a suggestion.
+- intent: unknown
+  examples: |
+    - Blah blah blah
+    - Something random
+    - Tell me a joke.

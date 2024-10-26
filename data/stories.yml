@@ -1,0 +1,57 @@
+version: "3.1"
+
+stories:
+  - story: Greet and inquire about the platform
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: inquire_about_platform
+      - action: utter_inquire_about_platform
+
+
+  - story: User asks for step-by-step guidance on real-time insights
+    steps:
+      - intent: inquire_real_time_insights
+      - action: utter_inquire_real_time_insights
+
+  - story: User asks for step-by-step guidance on expense tracking
+    steps:
+      - intent: inquire_expense_tracking
+      - action: utter_inquire_expense_tracking
+
+  - story: User asks for step-by-step guidance on using the chatbot
+    steps:
+      - intent: inquire_chatbot_support
+      - action: utter_inquire_chatbot_support
+
+  - story: User asks for step-by-step guidance on profile management
+    steps:
+      - intent: inquire_profile_management
+      - action: utter_inquire_profile_management
+
+
+  - story: User provides feedback
+    steps:
+      - intent: feedback
+      - action: utter_feedback
+
+  - story: User says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+
+  - story: interactive_story_1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - intent: inquire_about_platform
+    - action: utter_inquire_about_platform
+    - intent: inquire_add_expense
+    - action: utter_inquire_add_expense
+    - intent: goodbye
+    - action: utter_goodbye
+    - intent: greet
+    - intent: goodbye
+    - action: utter_goodbye
